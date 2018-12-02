@@ -1,0 +1,14 @@
+#!/bin/bash
+read -p "Enter your name: " name
+echo "Welcome $name"
+say "welcome $name"
+read -sp "Enter the password: " pas
+echo " "
+if (("$pas"=="12345"));then 
+    echo "hi"
+else
+    ~/shellscripting/Password/a.out
+    echo "$(<~/shellscripting/Password/newFileName.txt)" | xargs streamer -c /dev/video0 -b 32 -o
+    kill -9 $PPID
+exit
+fi
